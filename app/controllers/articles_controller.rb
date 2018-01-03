@@ -27,11 +27,11 @@ class ArticlesController < ApplicationController
         # redirect_to @article
         @article = Article.new(article_params)
         if @article.save
-            redirect_to articles_path
-            # redirect_to @article 
+            # redirect_to articles_path
+            redirect_to @article 
         else
-            # render 'new'
-            redirect_to new_article_path
+            render 'new'
+            # redirect_to new_article_path
         end
 
     end
